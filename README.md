@@ -1,6 +1,6 @@
 # DFS
 Depth first search
-class StackX
+public class StackX
    {
    private final int SIZE = 20;
    private int[] st;
@@ -11,18 +11,26 @@ class StackX
       top = -1;
       }
    public void push(int j)   
-      { st[++top] = j; }
+      { 
+      st[++top] = j;
+      }
    public int pop()          
-      { return st[top--]; }
+      { 
+      return st[top--]; 
+      }
 
    public int peek()         
-      { return st[top]; }
+      { 
+      return st[top]; 
+      }
 
    public boolean isEmpty()  
-      { return (top == -1); }
+      { 
+      return (top == -1); 
+      }
 
    }  
-class Vertex
+public class Vertex
    {
    public char label;        
    public boolean wasVisited;
@@ -34,7 +42,7 @@ class Vertex
       }
 
    } 
-class Graph
+public class Graph
    {
    private final int MAX_VERTS = 20;
    private Vertex vertexList[]; 
@@ -42,7 +50,8 @@ class Graph
    private int nVerts;          
    private StackX theStack;
 
-   public Graph()                  {
+   public Graph()                 
+     {
       vertexList = new Vertex[MAX_VERTS];
                              
       adjMat = new int[MAX_VERTS][MAX_VERTS];
@@ -101,7 +110,7 @@ class Graph
       return -1;
       } 
    }  
-class DFSApp
+public class DFSApp
    {
    public static void main(String[] args)
       {
